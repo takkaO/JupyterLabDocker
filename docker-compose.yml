@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  jupyterlab:
+    build: .
+    image: jupyterlab
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    volumes:
+      - ./src:/home/src
+    tty: true
+    stdin_open: true
+    ports:
+      - 8888:8888
+    container_name: jupyterlab
