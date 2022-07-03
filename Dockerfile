@@ -163,4 +163,4 @@ RUN echo ' \
     "locale": "ja_JP"\n\
 }' >> /root/.jupyter/lab/user-settings/@jupyterlab/translation-extension/plugin.jupyterlab-settings
 
-CMD [ "jupyter-lab","--notebook-dir=/home","--no-browser","--port=8888","--ip=0.0.0.0","--allow-root","--NotebookApp.token=''"]
+CMD [ "jupyter-lab","--notebook-dir=/home/src","--no-browser","--port=8888","--ip=0.0.0.0","--allow-root","--NotebookApp.token=''"]
